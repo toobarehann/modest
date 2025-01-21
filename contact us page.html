@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - Modest Muse</title>
+    <style>
+        :root {
+            --background-color: hsl(30, 41%, 18%);
+            --text-color: white;
+            --accent-color: #ffd700;
+            --sidebar-bg: rgba(255, 255, 255, 0.1);
+        }
+
+        body.light-mode {
+            --background-color: white;
+            --text-color: black;
+            --accent-color: #ff7e00; 
+            --sidebar-bg: rgba(0, 0, 0, 0.1);
+        }
+
+        body {
+            background: var(--background-color);
+            color: var(--text-color);
+            font-family: Arial, sans-serif;
+            margin: 0;
+            transition: all 0.3s;
+        }
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 20px;
+            background: rgba(0, 0, 0, 0.6);
+        }
+
+        .logo {
+            width: 110px;
+            height: 120px;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 20px;
+            margin: 0;
+            padding: 0;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: var(--accent-color);
+            font-size: 1rem;
+            font-weight: bold;
+        }
+
+        nav a:hover {
+            text-decoration: underline;
+        }
+
+        .theme-toggle {
+            cursor: pointer;
+            font-size: 1.2rem;
+            background: none;
+            border: none;
+            color: var(--accent-color);
+            padding: 5px;
+        }
+
+        main {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            text-align: center;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            margin-top: 20px;
+            background: rgba(255, 255, 255, 0.1);
+            padding: 20px;
+            border-radius: 10px;
+        }
+
+        form label {
+            font-weight: bold;
+            text-align: left;
+        }
+
+        form input, form textarea, form button {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ffd700;
+            border-radius: 5px;
+            background: transparent;
+            color: white;
+            font-size: 1rem;
+        }
+
+        form button {
+            background: #ffd700;
+            color: black;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        form button:hover {
+            background: #ffbf00;
+        }
+
+        .live-chat {
+            margin-top: 30px;
+            background: var(--sidebar-bg);
+            padding: 15px;
+            border-radius: 10px;
+        }
+
+        .live-chat h3 {
+            margin-bottom: 10px;
+            color: var(--accent-color);
+        }
+
+        .reviews {
+            margin-top: 30px;
+            text-align: center;
+        }
+
+        .stars {
+            display: flex;
+            justify-content: center;
+            gap: 5px;
+        }
+
+        .stars span {
+            font-size: 2rem;
+            color: #ffd700;
+            cursor: pointer;
+        }
+
+        .stars span:hover,
+        .stars span:hover ~ span {
+            color: rgba(255, 255, 255, 0.3);
+        }
+
+        .faq {
+            margin-top: 30px;
+            text-align: left;
+        }
+
+        .faq details {
+            margin-bottom: 10px;
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 40px;
+            padding: 10px;
+            background: rgba(0, 0, 0, 0.6);
+        }
+
+    </style>
+</head>
+<body>
+    <header>
+        <img src="modest muse logo.png" alt="Modest Muse Logo" class="logo">
+        <nav>
+            <ul>
+                <li><a href="home page.html">Home</a></li>
+                <li><a href="about us page.html">About Us</a></li>
+                <li><a href="outfits.html">Outfits</a></li>
+                <li><a href="join our community page.html">Join Our Community</a></li>
+                <li><a href="contact us page.html">Contact Us</a></li>
+            </ul>
+        </nav>
+        <button class="theme-toggle" onclick="toggleTheme()">🌙</button>
+    </header>
+
+    <main>
+        <h1>Contact Us</h1>
+
+        <form action="#" method="post">
+            <label for="name">Your Name:</label>
+            <input type="text" id="name" name="name" required placeholder="Enter your name">
+
+            <label for="email">Your Email:</label>
+            <input type="email" id="email" name="email" required placeholder="Enter your email">
+
+            <label for="message">Your Message:</label>
+            <textarea id="message" name="message" rows="4" required placeholder="Write your message"></textarea>
+
+            <button type="submit">Send Message</button>
+        </form>
+
+        <div class="live-chat">
+            <h3>Live Chat Support</h3>
+            <p>Have a question or need assistance? Our team is available to help you with any queries you may have.</p>
+            <button>Start Chat</button>
+        </div>
+
+        <div class="reviews">
+            <h2>Rate Us</h2>
+            <div class="stars">
+                <span>&#9733;</span>
+                <span>&#9733;</span>
+                <span>&#9733;</span>
+                <span>&#9733;</span>
+                <span>&#9733;</span>
+            </div>
+        </div>
+
+        <div class="faq">
+            <h2>Frequently Asked Questions</h2>
+            <details>
+                <summary>What services does Modest Muse provide?</summary>
+                <p>We offer personalized guidance to help you discover your unique style, create vision boards, and curate outfit ideas.</p>
+            </details>
+            <details>
+                <summary>Do you sell clothing?</summary>
+                <p>No, we do not sell clothing at this time. Our focus is on empowering individuals through style consultations and creative tools.</p>
+            </details>
+            <details>
+                <summary>How can I book a style consultation?</summary>
+                <p>You can reach out to us via the contact form above, or email us at support@modestmuse.com to schedule a session.</p>
+            </details>
+            <details>
+                <summary>What is a vision board?</summary>
+                <p>A vision board is a curated collection of images, colors, and ideas that help you visualize your ideal personal style.</p>
+            </details>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Modest Muse. All rights reserved.</p>
+    </footer>
+
+    <script>
+        function toggleTheme() {
+            document.body.classList.toggle('light-mode');
+            const themeToggle = document.querySelector('.theme-toggle');
+            themeToggle.textContent = document.body.classList.contains('light-mode') ? '☀️' : '🌙';
+        }
+    </script>
+</body>
+</html>
+
+
+
